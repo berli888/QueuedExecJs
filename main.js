@@ -1,5 +1,7 @@
 /**
  * Allow to execute functions as an event and in order.
+ * Use John Resig inheritance.
+ * http://ejohn.org/blog/simple-javascript-inheritance/
  */
 var QueuedExec = Class.extend({
         _queue: null,
