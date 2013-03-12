@@ -9,10 +9,12 @@ var QueuedExec = Class.extend({
 
         /**
          * Initialize the QueueExec object.
+         * @return {Object} The QueueExec object.
          */
         init: function () {
             this._queue = [];
             this._ms = 0;
+            return this;
         },
 
         /**
