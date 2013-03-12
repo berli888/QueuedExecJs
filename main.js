@@ -5,7 +5,6 @@
  */
 var QueuedExec = Class.extend({
         _queue: null,
-        _ms: null,
 
         /**
          * Initialize the QueueExec object.
@@ -13,7 +12,6 @@ var QueuedExec = Class.extend({
          */
         init: function () {
             this._queue = [];
-            this._ms = 0;
             return this;
         },
 
@@ -38,21 +36,17 @@ var QueuedExec = Class.extend({
          * Tell the QueuedExec instance to execute the next function.
          */
         execNext: function () {
-            this._myTimeout(0);
+            this._myTimeout();
         },
 
         /**
          * @private
          */
-        _myTimeout: function (time) {
+        _myTimeout: function () {
             var that = this;
-            var ms = time;
-            if (arguments.length === 0) {
-                ms = that._ms;
-            }
             setTimeout(function () {
                 that._doNext();
-            }, ms);
+            }, 0);
         },
 
         /**
