@@ -1,5 +1,5 @@
 /**
- * Allow to execute functions as an event and in order.
+ * Allow to execute functions as events and in order.
  * Use John Resig inheritance.
  * http://ejohn.org/blog/simple-javascript-inheritance/
  */
